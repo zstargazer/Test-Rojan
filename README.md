@@ -16,7 +16,7 @@
    2.7 回到vps中，X-UI生成的登录端口需要添加进vps的入站规则。源类型：CIDR，无状态：灰色，源CIDR：0.0.0.0/0，IP协议：TCP，目的地端口范围：“刚才X-UI生成的随机登陆端口”。
    2.8 使用https://IP4地址/X-UI随机登录端口/xxx，会显示vps中安装的X-UI登录界面，使用随机生成的用户名和密码登录X-UI
    2.9 在“节点列表”中“添加节点”，必要项：
-     2.9.1 协议：vmess；启用：蓝色；监听IP：空；端口：443；到期时间：空；uuid：默认不动；额外ID：0；传输协议：ws；禁用不安全加密：灰色；AcceptProxyProtocol：灰色；路径：/123;
+     2.9.1 协议：vmess；启用：蓝色；监听IP：空；端口：443；到期时间：空；uuid：默认不动；额外ID：0；传输协议：ws；禁用不安全加密：灰色；AcceptProxyProtocol：灰色；路径：/Gxx;
            请求头添加：名称Host，值：us.kg申请的域名；TLS（域名证书已申请）：蓝色；证书所指向的域名：us.kg申请的域名；证书方式：certificate file content; 公钥内容:------BEGIN CERTIFICATE-----;密钥内容：-----BEGIN PRIVATE KEY-----;
            Alpn：h2, http/1.1; sniffing:蓝色。
 
