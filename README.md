@@ -6,10 +6,26 @@
    1.4 创建实例后，保存IP4的地址；
    1.5 在入站规则中确认80，443端口是开放状态(0.0.0.0/0).
 
-2. 下载FinalShell，安装X-UI界面
+2. 申请域名
+   3.1 通过us.kg网站申请，可以参考“Youtube 零度解说”；
+     3.1.1 申请了“zxxzer.us.kg"作为个人网站的域名；
+   3.2 通过Cloudflare解析域名，将"zxxzer.us.kg"和实例的IP4地址绑定，并开启代理；
+   3.3 将Cloudflare DNS的记录里，两个NS类型的值复制到us.kg对应的“Name Server 1 & 2”中；
+   3.4 在Cloudflare中确认认证，过一会儿，域名状态就会变绿。
+
+3. 下载FinalShell，
    2.1 文件夹图标，新建"SSL连接(Linux)"
    2.2 主机：oracle 实例的IP4地址，端口：22，认证方法：公钥，并添加从oracle下载保存的私钥，高级勾选“智能加速”。
    2.3 连接主机成功后，用sudo -i命令获取管理员权限。
+
+5. 在管理员界面下，安装aaPanel
+   3.1 参考https://www.youtube.com/watch?v=HbK1oh88yKs&t=188s的教程；
+   3.2 从aaPanel网站下载安装aaPanel面板。指令如下：wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bash install.sh aapanel （整个过程大约10分钟）；
+   3.3 会自动生成登录路径，用户名以及密码；
+   3.4 在VPS服务器中，打开aaPanel登录路径需要的端口，并登录aaPanel；
+   3.5 登录后，点击左侧Website，添加一个新的网页。
+
+6. 安装X-UI界面
    2.4 准备安装X-UI界面，可以参考https://www.youtube.com/watch?v=DZ1d_k9VgQY
    2.5 X-UI下载地址和视频不一样，使用：https://github.com/yonggekkk/x-ui-yg；使用回车，创建随机的用户名，密码，登录端口等信息；
    2.6 安装完成后，拍照记录下刚才生成的随机登录信息。
